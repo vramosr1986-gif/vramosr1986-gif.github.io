@@ -194,3 +194,145 @@
         }
 
         footer {
+            text-align: center;
+            margin-top: 4rem;
+            padding-top: 2rem;
+            border-top: 1px solid #334155;
+            color: #64748b;
+            font-size: 0.85rem;
+        }
+
+        footer a {
+            color: #60a5fa;
+            text-decoration: none;
+        }
+
+        @media (max-width: 600px) {
+            h1 { font-size: 1.6rem; }
+            .avatar { width: 90px; height: 90px; font-size: 2.2rem; }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+
+        <header>
+            <div class="avatar">VR</div>
+            <h1>Victor Ramos</h1>
+            <p class="subtitle">Ingeniero de Infraestructura y Automatización IT</p>
+            <div class="links">
+                <a href="https://github.com/vramosr1986-gif" target="_blank">GitHub</a>
+                <a href="https://www.linkedin.com/in/victor-ramos" target="_blank">LinkedIn</a>
+                <a href="mailto:vramos86@gmail.com">Email</a>
+            </div>
+        </header>
+
+        <section>
+            <h2>Sobre mí</h2>
+            <p>
+                Llevo más de 10 años en el sector tecnológico. He vivido la evolución de la industria en primera persona y, con cada cambio, he adaptado mis competencias para seguir aportando valor.
+            </p>
+            <p>
+                Empecé en la gestión de dispositivos cuando el término MDM apenas nacía y BlackBerry dominaba el ámbito empresarial. Con los años, acompañé la transición hacia soluciones como SOTI, MobileIron o AirWatch, evolucionando hacia el entorno EMM y UEM.
+            </p>
+            <p>
+                He trabajado ampliamente con Windows, Linux, Active Directory, VMware y Azure. Automatizo procesos mediante Ansible y PowerShell, e integro sistemas consumiendo APIs REST. Aunque mi perfil no es el de un desarrollador puro, destaca mi capacidad para entender cómo se conectan las distintas piezas de la infraestructura.
+            </p>
+            <p>
+                Actualmente enfoco mi desarrollo técnico en Terraform, Docker e IA generativa aplicada a la automatización.
+            </p>
+            <p>
+                Este portfolio es mi banco de pruebas. En el trabajo es habitual que el alcance de tu puesto esté acotado, pero a mí me gusta ir un paso por delante. Cuando veo tecnologías con mucho potencial que en mi empresa manejan otros departamentos o que aún están por llegar, me pongo a practicarlas por mi cuenta. Es mi manera de demostrar con hechos mi autonomía, mi velocidad de aprendizaje y mi capacidad para aportar valor desde el primer día.
+            </p>
+            <p>
+                Mi trayectoria me permite moverme con fluidez entre equipos de operaciones, redes, sistemas y gestión. Aporto una base técnica sólida que facilita la alineación entre distintas áreas y actúo como puente entre la parte técnica y el negocio, traduciendo problemas complejos a un lenguaje claro para clientes y responsables.
+            </p>
+        </section>
+
+        <section>
+            <h2>Formación</h2>
+            <ul class="education-list">
+                <li><strong>Grado Superior en Administración de Sistemas Informáticos</strong> — Cimentación técnica en sistemas operativos, redes y seguridad.</li>
+                <li><strong>Bachelor en Tecnologías de la Información para la Empresa</strong> — Gestión de proyectos, visión estratégica e impacto del negocio.</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>Laboratorios</h2>
+            <div class="project">
+                <h3>terraform-docker-lab</h3>
+                <p class="desc">
+                    Stack multi-contenedor desplegado con Terraform sobre Docker. Incluye Nginx, PostgreSQL y Adminer, con pipeline CI/CD completo en GitHub Actions (validate, plan, apply, smoke test y destroy).
+                </p>
+                <p class="desc">
+                    <strong>Lo que demuestra:</strong> Infrastructure as Code, contenedores, bind mounts, CI/CD real y gestión segura de secretos.
+                </p>
+                <div class="tags">
+                    <span class="tag">Terraform</span>
+                    <span class="tag">Docker</span>
+                    <span class="tag">GitHub Actions</span>
+                    <span class="tag">Bash</span>
+                    <span class="tag">HCL</span>
+                </div>
+                <p style="margin-top: 1rem;">
+                    <a href="https://github.com/vramosr1986-gif/terraform-docker-lab" target="_blank" style="color: #60a5fa; text-decoration: none;">
+                        Ver repositorio →
+                    </a>
+                </p>
+            </div>
+
+            <p style="color: #64748b; font-style: italic; margin-top: 1rem;">
+                Más proyectos en camino. Esto es solo el principio.
+            </p>
+        </section>
+
+        <section>
+            <h2>Habilidades</h2>
+            <div class="skills">
+                <div class="skill-group">
+                    <h4>Automatización</h4>
+                    <ul>
+                        <li>Ansible</li>
+                        <li>PowerShell</li>
+                        <li>Bash</li>
+                        <li>Terraform</li>
+                    </ul>
+                </div>
+                <div class="skill-group">
+                    <h4>Sistemas</h4>
+                    <ul>
+                        <li>Windows Server</li>
+                        <li>Active Directory</li>
+                        <li>Linux</li>
+                        <li>VMware vSphere</li>
+                    </ul>
+                </div>
+                <div class="skill-group">
+                    <h4>Cloud & Contenedores</h4>
+                    <ul>
+                        <li>Azure (en progreso)</li>
+                        <li>Docker</li>
+                        <li>GitHub Actions</li>
+                    </ul>
+                </div>
+                <div class="skill-group">
+                    <h4>Otros</h4>
+                    <ul>
+                        <li>APIs REST</li>
+                        <li>Git</li>
+                        <li>SQL Server</li>
+                        <li>Inglés B2</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <footer>
+            Victor Ramos · <a href="https://github.com/vramosr1986-gif" target="_blank">@vramosr1986-gif</a>
+            <br>
+            Hecho con HTML, CSS y aprendizaje continuo.
+        </footer>
+
+    </div>
+</body>
+</html>
