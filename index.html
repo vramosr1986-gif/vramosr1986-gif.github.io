@@ -4,22 +4,27 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Victor Ramos — Ingeniero de Infraestructura y Automatización</title>
+
     <style>
+        /* Reset */
         * { margin: 0; padding: 0; box-sizing: border-box; }
 
+        /* Layout base */
         body {
             font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
             background: #0f172a;
-            color: #cbd5e1; /* Texto claro con alto contraste */
+            color: #cbd5e1;
             line-height: 1.7;
             padding: 2rem 1rem;
         }
 
         .container {
-            max-width: 850px;
+            max-width: 900px;
             margin: 0 auto;
+            overflow: visible; /* evita cortes */
         }
 
+        /* Header */
         header {
             text-align: center;
             margin-bottom: 3rem;
@@ -42,8 +47,8 @@
         h1 {
             font-size: 2.2rem;
             font-weight: 700;
-            margin-bottom: 0.4rem;
             color: #f8fafc;
+            margin-bottom: 0.4rem;
         }
 
         .subtitle {
@@ -52,6 +57,7 @@
             margin-bottom: 1.5rem;
         }
 
+        /* Links */
         .links {
             display: flex;
             justify-content: center;
@@ -76,17 +82,17 @@
             color: #60a5fa;
         }
 
+        /* Sections */
         h2 {
             font-size: 1.4rem;
             font-weight: 600;
             margin: 2.8rem 0 1.2rem;
-            color: #f8fafc; /* Títulos bien visibles */
+            color: #f8fafc;
             border-bottom: 1px solid #334155;
             padding-bottom: 0.6rem;
         }
 
         p {
-            color: #cbd5e1;
             margin-bottom: 1.1rem;
             font-size: 1rem;
         }
@@ -95,6 +101,7 @@
             color: #f8fafc;
         }
 
+        /* Cards */
         .card-dark {
             background: #1e293b;
             border: 1px solid #334155;
@@ -108,10 +115,8 @@
         }
 
         .card-dark li {
-            color: #cbd5e1;
-            padding: 0.4rem 0;
+            padding: 0.4rem 0 0.4rem 1.4rem;
             position: relative;
-            padding-left: 1.4rem;
         }
 
         .card-dark li::before {
@@ -122,6 +127,7 @@
             left: 0;
         }
 
+        /* Projects */
         .project h3 {
             font-size: 1.15rem;
             font-weight: 600;
@@ -151,6 +157,7 @@
             border-radius: 999px;
         }
 
+        /* Skills */
         .skills {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
@@ -177,11 +184,11 @@
         }
 
         .skill-group li {
-            color: #cbd5e1;
             font-size: 0.95rem;
             padding: 0.2rem 0;
         }
 
+        /* Footer */
         footer {
             text-align: center;
             margin-top: 4rem;
@@ -196,28 +203,14 @@
             text-decoration: none;
         }
 
+        /* Mobile */
         @media (max-width: 600px) {
             h1 { font-size: 1.7rem; }
             .avatar { width: 90px; height: 90px; font-size: 2.2rem; }
         }
-        html, body {
-    height: auto !important;
-    overflow: visible !important;
-}
-
-section {
-    height: auto !important;
-    max-height: none !important;
-    overflow: visible !important;
-}
-
-.container {
-    max-width: 850px !important;
-    overflow: visible !important;
-}
-
     </style>
 </head>
+
 <body>
     <div class="container">
 
@@ -225,6 +218,7 @@ section {
             <div class="avatar">VR</div>
             <h1>Victor Ramos</h1>
             <p class="subtitle">Ingeniero de Infraestructura y Automatización IT</p>
+
             <div class="links">
                 <a href="https://github.com/vramosr1986-gif" target="_blank">🐙 GitHub</a>
                 <a href="https://www.linkedin.com/in/victor-ramos" target="_blank">💼 LinkedIn</a>
@@ -234,32 +228,20 @@ section {
 
         <section>
             <h2>Sobre mí</h2>
-            <p>
-                Llevo más de 10 años en el sector tecnológico. He vivido la evolución de la industria en primera persona y, con cada cambio, he adaptado mis competencias para seguir aportando valor.
-            </p>
-            <p>
-                Empecé en la gestión de dispositivos cuando el término MDM apenas nacía y BlackBerry dominaba el ámbito empresarial. Con los años, acompañé la transición hacia soluciones como SOTI, MobileIron o AirWatch, evolucionando hacia el entorno EMM y UEM.
-            </p>
-            <p>
-                He trabajado ampliamente con Windows, Linux, Active Directory, VMware y Azure. Automatizo procesos mediante <strong>Ansible</strong> y <strong>PowerShell</strong>, e integro sistemas consumiendo APIs REST. Aunque mi perfil no es el de un desarrollador puro, destaca mi capacidad para entender cómo se conectan las distintas piezas de la infraestructura.
-            </p>
-            <p>
-                Actualmente enfoco mi desarrollo técnico en <strong>Terraform</strong>, <strong>Docker</strong> e <strong>IA generativa</strong> aplicada a la automatización.
-            </p>
-            <p>
-                Este portfolio es mi banco de pruebas. En el trabajo es habitual que el alcance de tu puesto esté acotado, pero a mí me gusta ir un paso por delante. Cuando veo tecnologías con mucho potencial que en mi empresa manejan otros departamentos o que aún están por llegar, me pongo a practicarlas por mi cuenta. Es mi manera de demostrar con hechos mi autonomía, mi velocidad de aprendizaje y mi capacidad para aportar valor desde el primer día.
-            </p>
-            <p>
-                Mi trayectoria me permite moverme con fluidez entre equipos de operaciones, redes, sistemas y gestión. Aporto una base técnica sólida que facilita la alineación entre distintas áreas y actúo como puente entre la parte técnica y el negocio, traduciendo problemas complejos a un lenguaje claro para clientes y responsables.
-            </p>
+            <p>Llevo más de 10 años en el sector tecnológico…</p>
+            <p>Empecé en la gestión de dispositivos cuando el término MDM apenas nacía…</p>
+            <p>He trabajado ampliamente con Windows, Linux, Active Directory, VMware y Azure…</p>
+            <p>Actualmente enfoco mi desarrollo técnico en Terraform, Docker e IA generativa…</p>
+            <p>Este portfolio es mi banco de pruebas…</p>
+            <p>Mi trayectoria me permite moverme con fluidez entre equipos…</p>
         </section>
 
         <section>
             <h2>Formación</h2>
             <div class="card-dark">
                 <ul>
-                    <li><strong>Grado Superior en Administración de Sistemas Informáticos</strong> — Cimentación técnica en sistemas operativos, redes y seguridad.</li>
-                    <li><strong>Bachelor en Tecnologías de la Información para la Empresa</strong> — Gestión de proyectos, visión estratégica e impacto del negocio.</li>
+                    <li><strong>Grado Superior en Administración de Sistemas Informáticos</strong></li>
+                    <li><strong>Bachelor en Tecnologías de la Información para la Empresa</strong></li>
                 </ul>
             </div>
         </section>
@@ -268,12 +250,9 @@ section {
             <h2>Laboratorios</h2>
             <div class="card-dark project">
                 <h3>terraform-docker-lab</h3>
-                <p class="desc">
-                    Stack multi-contenedor desplegado con Terraform sobre Docker. Incluye Nginx, PostgreSQL y Adminer, con pipeline CI/CD completo en GitHub Actions (validate, plan, apply, smoke test y destroy).
-                </p>
-                <p class="desc">
-                    <strong>Lo que demuestra:</strong> Infrastructure as Code, contenedores, bind mounts, CI/CD real y gestión segura de secretos.
-                </p>
+                <p class="desc">Stack multi-contenedor desplegado con Terraform sobre Docker…</p>
+                <p class="desc"><strong>Lo que demuestra:</strong> IaC, contenedores, CI/CD…</p>
+
                 <div class="tags">
                     <span class="tag">Terraform</span>
                     <span class="tag">Docker</span>
@@ -281,65 +260,16 @@ section {
                     <span class="tag">Bash</span>
                     <span class="tag">HCL</span>
                 </div>
-                <p style="margin-top: 1rem; margin-bottom: 0;">
-                    <a href="https://github.com/vramosr1986-gif/terraform-docker-lab" target="_blank" style="color: #60a5fa; text-decoration: none;">
+
+                <p style="margin-top: 1rem;">
+                    <a href="https://github.com/vramosr1986-gif/terraform-docker-lab" target="_blank" style="color:#60a5fa;">
                         Ver repositorio →
                     </a>
                 </p>
             </div>
 
-            <p style="color: #64748b; font-style: italic; margin-top: 1rem;">
-                Más proyectos en camino. Esto es solo el principio.
-            </p>
+            <p style="color:#64748b; font-style:italic;">Más proyectos en camino.</p>
         </section>
 
         <section>
-            <h2>Habilidades</h2>
-            <div class="skills">
-                <div class="skill-group">
-                    <h4>Automatización</h4>
-                    <ul>
-                        <li>Ansible</li>
-                        <li>PowerShell</li>
-                        <li>Bash</li>
-                        <li>Terraform</li>
-                    </ul>
-                </div>
-                <div class="skill-group">
-                    <h4>Sistemas</h4>
-                    <ul>
-                        <li>Windows Server</li>
-                        <li>Active Directory</li>
-                        <li>Linux</li>
-                        <li>VMware vSphere</li>
-                    </ul>
-                </div>
-                <div class="skill-group">
-                    <h4>Cloud & Contenedores</h4>
-                    <ul>
-                        <li>Azure (en progreso)</li>
-                        <li>Docker</li>
-                        <li>GitHub Actions</li>
-                    </ul>
-                </div>
-                <div class="skill-group">
-                    <h4>Otros</h4>
-                    <ul>
-                        <li>APIs REST</li>
-                        <li>Git</li>
-                        <li>SQL Server</li>
-                        <li>Inglés B2</li>
-                    </ul>
-                </div>
-            </div>
-        </section>
-
-        <footer>
-            Victor Ramos · <a href="https://github.com/vramosr1986-gif" target="_blank">@vramosr1986-gif</a>
-            <br>
-            Hecho con HTML, CSS y aprendizaje continuo.
-        </footer>
-
-    </div>
-</body>
-</html>
+            <h2>Habilidades
