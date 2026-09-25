@@ -9,14 +9,14 @@
 
         body {
             font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-            background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
-            color: #e2e8f0;
+            background: #0f172a;
+            color: #cbd5e1; /* Texto claro con alto contraste */
             line-height: 1.7;
             padding: 2rem 1rem;
         }
 
         .container {
-            max-width: 900px;
+            max-width: 850px;
             margin: 0 auto;
         }
 
@@ -26,26 +26,24 @@
         }
 
         .avatar {
-            width: 120px;
-            height: 120px;
+            width: 110px;
+            height: 110px;
             border-radius: 50%;
-            background: linear-gradient(135deg, #60a5fa, #a78bfa);
+            background: linear-gradient(135deg, #3b82f6, #8b5cf6);
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 3rem;
+            font-size: 2.8rem;
             font-weight: 700;
-            color: white;
+            color: #ffffff;
             margin: 0 auto 1.5rem;
         }
 
         h1 {
             font-size: 2.2rem;
             font-weight: 700;
-            margin-bottom: 0.5rem;
-            background: linear-gradient(90deg, #60a5fa, #a78bfa);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
+            margin-bottom: 0.4rem;
+            color: #f8fafc;
         }
 
         .subtitle {
@@ -57,103 +55,94 @@
         .links {
             display: flex;
             justify-content: center;
-            gap: 1rem;
+            gap: 0.8rem;
             flex-wrap: wrap;
         }
 
         .links a {
-            display: inline-flex;
-            align-items: center;
-            gap: 0.4rem;
-            padding: 0.5rem 1rem;
-            background: rgba(51, 65, 85, 0.5);
+            padding: 0.5rem 1.2rem;
+            background: #1e293b;
             border: 1px solid #334155;
             border-radius: 8px;
-            color: #e2e8f0;
+            color: #f8fafc;
             text-decoration: none;
             font-size: 0.9rem;
-            transition: border-color 0.2s;
+            font-weight: 500;
+            transition: all 0.2s;
         }
 
         .links a:hover {
             border-color: #60a5fa;
+            color: #60a5fa;
         }
 
         h2 {
-            font-size: 1.5rem;
+            font-size: 1.4rem;
             font-weight: 600;
-            margin: 3rem 0 1.5rem;
-            color: #f1f5f9;
-            border-bottom: 2px solid #334155;
-            padding-bottom: 0.5rem;
+            margin: 2.8rem 0 1.2rem;
+            color: #f8fafc; /* Títulos bien visibles */
+            border-bottom: 1px solid #334155;
+            padding-bottom: 0.6rem;
         }
 
         p {
             color: #cbd5e1;
-            margin-bottom: 1.2rem;
+            margin-bottom: 1.1rem;
+            font-size: 1rem;
         }
 
-        .education-list {
-            list-style: none;
-            background: rgba(30, 41, 59, 0.6);
+        strong {
+            color: #f8fafc;
+        }
+
+        .card-dark {
+            background: #1e293b;
             border: 1px solid #334155;
             border-radius: 10px;
             padding: 1.25rem 1.5rem;
+            margin-bottom: 1rem;
         }
 
-        .education-list li {
+        .card-dark ul {
+            list-style: none;
+        }
+
+        .card-dark li {
             color: #cbd5e1;
-            font-size: 0.95rem;
             padding: 0.4rem 0;
             position: relative;
-            padding-left: 1.5rem;
+            padding-left: 1.4rem;
         }
 
-        .education-list li::before {
+        .card-dark li::before {
             content: "•";
             color: #60a5fa;
             font-weight: bold;
-            font-size: 1.2rem;
             position: absolute;
             left: 0;
-            top: 0.1rem;
-        }
-
-        .project {
-            background: rgba(30, 41, 59, 0.6);
-            border: 1px solid #334155;
-            border-radius: 12px;
-            padding: 1.5rem;
-            margin-bottom: 1rem;
-            transition: border-color 0.2s;
-        }
-
-        .project:hover {
-            border-color: #3b82f6;
         }
 
         .project h3 {
-            font-size: 1.2rem;
+            font-size: 1.15rem;
             font-weight: 600;
-            margin-bottom: 0.5rem;
-            color: #f1f5f9;
+            margin-bottom: 0.4rem;
+            color: #f8fafc;
         }
 
         .project .desc {
             color: #94a3b8;
             font-size: 0.95rem;
-            margin-bottom: 1rem;
+            margin-bottom: 0.8rem;
         }
 
         .tags {
             display: flex;
             flex-wrap: wrap;
-            gap: 0.5rem;
-            margin-top: 1rem;
+            gap: 0.4rem;
+            margin-top: 0.8rem;
         }
 
         .tag {
-            display: inline-block;
             background: rgba(59, 130, 246, 0.15);
             border: 1px solid rgba(59, 130, 246, 0.3);
             color: #60a5fa;
@@ -164,22 +153,22 @@
 
         .skills {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
             gap: 1rem;
         }
 
         .skill-group {
-            background: rgba(30, 41, 59, 0.6);
+            background: #1e293b;
             border: 1px solid #334155;
             border-radius: 10px;
             padding: 1.25rem;
         }
 
         .skill-group h4 {
-            font-size: 0.85rem;
+            font-size: 0.8rem;
             text-transform: uppercase;
             letter-spacing: 0.05em;
-            color: #64748b;
+            color: #94a3b8;
             margin-bottom: 0.75rem;
         }
 
@@ -208,7 +197,7 @@
         }
 
         @media (max-width: 600px) {
-            h1 { font-size: 1.6rem; }
+            h1 { font-size: 1.7rem; }
             .avatar { width: 90px; height: 90px; font-size: 2.2rem; }
         }
     </style>
@@ -221,9 +210,9 @@
             <h1>Victor Ramos</h1>
             <p class="subtitle">Ingeniero de Infraestructura y Automatización IT</p>
             <div class="links">
-                <a href="https://github.com/vramosr1986-gif" target="_blank">GitHub</a>
-                <a href="https://www.linkedin.com/in/victor-ramos" target="_blank">LinkedIn</a>
-                <a href="mailto:vramos86@gmail.com">Email</a>
+                <a href="https://github.com/vramosr1986-gif" target="_blank">🐙 GitHub</a>
+                <a href="https://www.linkedin.com/in/victor-ramos" target="_blank">💼 LinkedIn</a>
+                <a href="mailto:vramos86@gmail.com">✉️ Email</a>
             </div>
         </header>
 
@@ -236,10 +225,10 @@
                 Empecé en la gestión de dispositivos cuando el término MDM apenas nacía y BlackBerry dominaba el ámbito empresarial. Con los años, acompañé la transición hacia soluciones como SOTI, MobileIron o AirWatch, evolucionando hacia el entorno EMM y UEM.
             </p>
             <p>
-                He trabajado ampliamente con Windows, Linux, Active Directory, VMware y Azure. Automatizo procesos mediante Ansible y PowerShell, e integro sistemas consumiendo APIs REST. Aunque mi perfil no es el de un desarrollador puro, destaca mi capacidad para entender cómo se conectan las distintas piezas de la infraestructura.
+                He trabajado ampliamente con Windows, Linux, Active Directory, VMware y Azure. Automatizo procesos mediante <strong>Ansible</strong> y <strong>PowerShell</strong>, e integro sistemas consumiendo APIs REST. Aunque mi perfil no es el de un desarrollador puro, destaca mi capacidad para entender cómo se conectan las distintas piezas de la infraestructura.
             </p>
             <p>
-                Actualmente enfoco mi desarrollo técnico en Terraform, Docker e IA generativa aplicada a la automatización.
+                Actualmente enfoco mi desarrollo técnico en <strong>Terraform</strong>, <strong>Docker</strong> e <strong>IA generativa</strong> aplicada a la automatización.
             </p>
             <p>
                 Este portfolio es mi banco de pruebas. En el trabajo es habitual que el alcance de tu puesto esté acotado, pero a mí me gusta ir un paso por delante. Cuando veo tecnologías con mucho potencial que en mi empresa manejan otros departamentos o que aún están por llegar, me pongo a practicarlas por mi cuenta. Es mi manera de demostrar con hechos mi autonomía, mi velocidad de aprendizaje y mi capacidad para aportar valor desde el primer día.
@@ -251,15 +240,17 @@
 
         <section>
             <h2>Formación</h2>
-            <ul class="education-list">
-                <li><strong>Grado Superior en Administración de Sistemas Informáticos</strong> — Cimentación técnica en sistemas operativos, redes y seguridad.</li>
-                <li><strong>Bachelor en Tecnologías de la Información para la Empresa</strong> — Gestión de proyectos, visión estratégica e impacto del negocio.</li>
-            </ul>
+            <div class="card-dark">
+                <ul>
+                    <li><strong>Grado Superior en Administración de Sistemas Informáticos</strong> — Cimentación técnica en sistemas operativos, redes y seguridad.</li>
+                    <li><strong>Bachelor en Tecnologías de la Información para la Empresa</strong> — Gestión de proyectos, visión estratégica e impacto del negocio.</li>
+                </ul>
+            </div>
         </section>
 
         <section>
             <h2>Laboratorios</h2>
-            <div class="project">
+            <div class="card-dark project">
                 <h3>terraform-docker-lab</h3>
                 <p class="desc">
                     Stack multi-contenedor desplegado con Terraform sobre Docker. Incluye Nginx, PostgreSQL y Adminer, con pipeline CI/CD completo en GitHub Actions (validate, plan, apply, smoke test y destroy).
@@ -274,7 +265,7 @@
                     <span class="tag">Bash</span>
                     <span class="tag">HCL</span>
                 </div>
-                <p style="margin-top: 1rem;">
+                <p style="margin-top: 1rem; margin-bottom: 0;">
                     <a href="https://github.com/vramosr1986-gif/terraform-docker-lab" target="_blank" style="color: #60a5fa; text-decoration: none;">
                         Ver repositorio →
                     </a>
