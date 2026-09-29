@@ -1,366 +1,243 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Victor Ramos — Ingeniero de Infraestructura y Automatización</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Victor Ramos — Ingeniero de Infraestructura y Automatización IT</title>
+<meta name="description" content="Portfolio de Victor Ramos: infraestructura, automatización, Kubernetes, Terraform y GitOps.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root {
+  --bg: #f6f6fb;
+  --panel: #ffffff;
+  --ink: #181828;
+  --muted: #58586f;
+  --line: #dcdcea;
+  --accent: #4a44b8;
+  --veil: rgba(246, 246, 251, 0.80);
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #12111c;
+    --panel: #191827;
+    --ink: #e8e8f4;
+    --muted: #a3a3bd;
+    --line: #2b2a40;
+    --accent: #9d98f0;
+    --veil: rgba(18, 17, 28, 0.86);
+  }
+}
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  background: var(--bg);
+  color: var(--ink);
+  font-family: "IBM Plex Sans", -apple-system, "Segoe UI", Roboto, sans-serif;
+  font-size: 1rem;
+  line-height: 1.65;
+  -webkit-font-smoothing: antialiased;
+}
+body::before {
+  content: ""; position: fixed; inset: 0; z-index: -2;
+  background: url(data:image/jpeg;base64,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) center / cover no-repeat;
+}
+body::after { content: ""; position: fixed; inset: 0; z-index: -1; background: var(--veil); }
+a { color: var(--accent); text-decoration: none; }
+a:hover { text-decoration: underline; text-underline-offset: 3px; }
+a:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; border-radius: 2px; }
 
-    <style>
-        * { 
-            margin: 0; 
-            padding: 0; 
-            box-sizing: border-box; 
-        }
+.layout {
+  max-width: 1080px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 300px 1fr;
+  gap: 4rem;
+  padding: 0 2rem;
+}
 
-        html, body {
-            background-color: #0f172a;
-            color: #cbd5e1;
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-            line-height: 1.7;
-            padding: 2rem 1rem;
-            min-height: 100vh;
-        }
+/* Columna izquierda */
+.rail {
+  position: sticky;
+  top: 0;
+  align-self: start;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 3rem 0;
+}
+.rail h1 {
+  font-size: 2.5rem;
+  font-weight: 600;
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+}
+.rail .role {
+  margin-top: 0.9rem;
+  font-size: 1.05rem;
+  color: var(--muted);
+  max-width: 24ch;
+}
+.rail nav { margin-top: 2.5rem; display: flex; flex-direction: column; gap: 0.5rem; }
+.rail nav a { color: var(--muted); font-weight: 500; font-size: 0.95rem; }
+.rail nav a:hover { color: var(--ink); text-decoration: none; }
+.contact { margin-top: 2.5rem; display: flex; flex-direction: column; gap: 0.35rem; font-size: 0.95rem; }
 
-        .container {
-            max-width: 850px;
-            margin: 0 auto;
-        }
+/* Contenido */
+main { padding: 5rem 0 4rem; max-width: 640px; }
+.hero { display: block; width: 100%; height: auto; aspect-ratio: 16 / 9; object-fit: cover; border-radius: 6px; margin-bottom: 3.5rem; background: var(--line); }
+section + section { margin-top: 4rem; }
+h2 {
+  font-size: 1.05rem;
+  font-weight: 600;
+  padding-bottom: 0.75rem;
+  margin-bottom: 1.5rem;
+  border-bottom: 1px solid var(--line);
+}
+p { margin-bottom: 1.1rem; color: var(--ink); }
+p:last-child { margin-bottom: 0; }
 
-        header {
-            text-align: center;
-            margin-bottom: 3rem;
-        }
+.work { list-style: none; }
+.work li { padding: 1rem 0; border-bottom: 1px solid var(--line); }
+.work li:first-child { padding-top: 0; }
+.work strong { display: block; font-weight: 600; margin-bottom: 0.15rem; }
+.work span { color: var(--muted); font-size: 0.95rem; }
+.project { padding: 1.5rem 0; border-bottom: 1px solid var(--line); }
+.project:first-of-type { padding-top: 0; }
+.project h3 { font-size: 1.15rem; font-weight: 600; margin-bottom: 0.5rem; }
+.project p { color: var(--muted); font-size: 0.97rem; }
+.project p strong { color: var(--ink); font-weight: 500; }
+.diagram { display: block; width: 100%; height: auto; margin: 1.1rem 0 0.4rem; }
+.diagram text { font-family: inherit; font-size: 12px; fill: var(--ink); text-anchor: middle; }
+.diagram .sub { fill: var(--muted); font-size: 11px; }
+.diagram .box { fill: var(--panel); stroke: var(--line); stroke-width: 1.2; }
+.diagram .group { fill: none; stroke: var(--accent); stroke-width: 1.2; stroke-dasharray: 5 4; }
+.diagram .arrow { stroke: var(--muted); stroke-width: 1.4; fill: none; }
+.diagram .head { fill: var(--muted); }
+.stack { margin-top: 0.9rem; font-size: 0.88rem; color: var(--muted); }
+.project .repo { display: inline-block; margin-top: 0.9rem; font-weight: 500; font-size: 0.95rem; }
+.soon { margin-top: 1.5rem; color: var(--muted); font-size: 0.95rem; }
 
-        .avatar {
-            width: 110px;
-            height: 110px;
-            border-radius: 50%;
-            background: linear-gradient(135deg, #3b82f6, #8b5cf6);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 2.8rem;
-            font-weight: 700;
-            color: #ffffff;
-            margin: 0 auto 1.5rem;
-        }
+dl { display: grid; grid-template-columns: 9rem 1fr; row-gap: 1rem; column-gap: 1.5rem; }
+dt { font-weight: 600; font-size: 0.95rem; }
+dd { color: var(--muted); font-size: 0.95rem; }
 
-        h1 {
-            font-size: 2.2rem;
-            font-weight: 700;
-            margin-bottom: 0.4rem;
-            color: #f8fafc;
-        }
+footer { margin-top: 5rem; padding-top: 1.5rem; border-top: 1px solid var(--line); color: var(--muted); font-size: 0.85rem; }
 
-        .subtitle {
-            font-size: 1.1rem;
-            color: #94a3b8;
-            margin-bottom: 1.5rem;
-        }
-
-        .links {
-            display: flex;
-            justify-content: center;
-            gap: 0.8rem;
-            flex-wrap: wrap;
-        }
-
-        .links a {
-            padding: 0.5rem 1.2rem;
-            background: #1e293b;
-            border: 1px solid #334155;
-            border-radius: 8px;
-            color: #f8fafc;
-            text-decoration: none;
-            font-size: 0.9rem;
-            font-weight: 500;
-            transition: all 0.2s;
-        }
-
-        .links a:hover {
-            border-color: #60a5fa;
-            color: #60a5fa;
-        }
-
-        h2 {
-            font-size: 1.4rem;
-            font-weight: 600;
-            margin: 2.8rem 0 1.2rem;
-            color: #f8fafc;
-            border-bottom: 1px solid #334155;
-            padding-bottom: 0.6rem;
-        }
-
-        h3, h4 {
-            color: #f8fafc;
-        }
-
-        p {
-            color: #cbd5e1;
-            margin-bottom: 1.1rem;
-            font-size: 1rem;
-        }
-
-        strong {
-            color: #f8fafc;
-        }
-
-        .card-dark {
-            background: #1e293b;
-            border: 1px solid #334155;
-            border-radius: 10px;
-            padding: 1.25rem 1.5rem;
-            margin-bottom: 1rem;
-            color: #cbd5e1;
-        }
-
-        .card-dark ul {
-            list-style: none;
-            padding-left: 0;
-            margin-bottom: 0;
-        }
-
-        .card-dark li {
-            color: #cbd5e1;
-            padding: 0.4rem 0;
-            position: relative;
-            padding-left: 1.4rem;
-        }
-
-        .card-dark li::before {
-            content: "•";
-            color: #60a5fa;
-            font-weight: bold;
-            position: absolute;
-            left: 0;
-        }
-
-        .project h3 {
-            font-size: 1.15rem;
-            font-weight: 600;
-            margin-bottom: 0.4rem;
-            color: #f8fafc;
-        }
-
-        .project .desc {
-            color: #94a3b8;
-            font-size: 0.95rem;
-            margin-bottom: 0.8rem;
-        }
-
-        .tags {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 0.4rem;
-            margin-top: 0.8rem;
-        }
-
-        .tag {
-            background: rgba(59, 130, 246, 0.15);
-            border: 1px solid rgba(59, 130, 246, 0.3);
-            color: #60a5fa;
-            font-size: 0.75rem;
-            padding: 0.2rem 0.6rem;
-            border-radius: 999px;
-        }
-
-        .skills {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 1rem;
-        }
-
-        .skill-group {
-            background: #1e293b;
-            border: 1px solid #334155;
-            border-radius: 10px;
-            padding: 1.25rem;
-        }
-
-        .skill-group h4 {
-            font-size: 0.8rem;
-            text-transform: uppercase;
-            letter-spacing: 0.05em;
-            color: #94a3b8;
-            margin-bottom: 0.75rem;
-        }
-
-        .skill-group ul {
-            list-style: none;
-            padding-left: 0;
-            margin-bottom: 0;
-        }
-
-        .skill-group li {
-            color: #cbd5e1;
-            font-size: 0.95rem;
-            padding: 0.2rem 0;
-        }
-
-        footer {
-            text-align: center;
-            margin-top: 4rem;
-            padding-top: 2rem;
-            border-top: 1px solid #334155;
-            color: #64748b;
-            font-size: 0.85rem;
-        }
-
-        footer a {
-            color: #60a5fa;
-            text-decoration: none;
-        }
-
-        @media (max-width: 600px) {
-            h1 { font-size: 1.7rem; }
-            .avatar { width: 90px; height: 90px; font-size: 2.2rem; }
-        }
-    </style>
+@media (max-width: 860px) {
+  .layout { grid-template-columns: 1fr; gap: 0; padding: 0 1.25rem; }
+  .rail { position: static; height: auto; padding: 3rem 0 0; }
+  .rail nav { flex-direction: row; gap: 1.25rem; margin-top: 1.75rem; }
+  .contact { margin-top: 1.75rem; }
+  main { padding-top: 2.5rem; }
+  dl { grid-template-columns: 1fr; row-gap: 0.15rem; }
+  dd { margin-bottom: 0.9rem; }
+}
+</style>
 </head>
 <body>
-    <div class="container">
+<div class="layout">
 
-        <header>
-            <div class="avatar">VR</div>
-            <h1>Victor Ramos</h1>
-            <p class="subtitle">Ingeniero de Infraestructura y Automatización IT</p>
-            <div class="links">
-                <a href="https://github.com/vramosr1986-gif" target="_blank">🐙 GitHub</a>
-                <a href="https://www.linkedin.com/in/victor-ramos" target="_blank">💼 LinkedIn</a>
-                <a href="mailto:vramos86@gmail.com">✉️ Email</a>
-            </div>
-        </header>
-        
-         <section>
-            <h2>Sobre mí</h2>
-            <p>
-                Llevo más de 10 años en el sector tecnológico. Empecé cuando el MDM apenas empezaba y BlackBerry era lo que había. Después llegaron SOTI, MobileIron, AirWatch y todo lo que vino detrás: EMM, UEM. La tecnología cambia, pero al final siempre se trata de resolver problemas reales.
-            </p>
-            <p>
-                He tocado Windows, Linux, Active Directory, VMware y Azure. Automatizo cosas con <strong>Ansible</strong> y <strong>PowerShell</strong>, conecto sistemas por <strong>API</strong> y ahora estoy metido con <strong>Terraform</strong>, <strong>Docker</strong> e <strong>IA generativa</strong>. No soy desarrollador puro, pero se me da bien entender cómo encajan las piezas.
-            </p>
-            <p>
-                Mi formación viene de dos sitios: el <strong>Grado Superior en Administración de Sistemas Informáticos</strong>, que me dio la base técnica, y el <strong>Bachelor en Tecnologías de la Información para la Empresa</strong>, que me enseñó a mirar la tecnología desde el negocio. Esa mezcla es la que me permite moverme con soltura entre lo técnico y lo estratégico.
-            </p>
-            <p>
-                Este portfolio es donde pruebo cosas por mi cuenta. En el trabajo no siempre puedes tocar lo que te interesa, así que lo practico por aquí. Nada más, y nada menos.
-            </p>
-            <p>
-                Con los años me he movido entre operaciones, redes, sistemas y gestión. Eso me ayuda a hablar con gente de perfiles muy distintos y a traducir lo técnico a algo que se entienda.
-            </p>
-        </section>
-        <section>
-            <h2>Laboratorios</h2>
-            <div class="card-dark project">
-                <h3>sre-observability-platform</h3>
-                <p class="desc">
-                    Plataforma de observabilidad y GitOps en Kubernetes sobre un clúster k3d multi-nodo. Incluye Argo CD con App-of-Apps, Prometheus, Grafana y Alertmanager, y se reconstruye entera desde cero con un único script.
-                </p>
-                <p class="desc">
-                    <strong>Lo que demuestra:</strong> GitOps declarativo con reconciliación y self-healing, gestión de CRDs, stack de observabilidad completo, charts de Helm propios y port-forwards automatizados.
-                </p>
-                <div class="tags">
-                    <span class="tag">Kubernetes</span>
-                    <span class="tag">Argo CD</span>
-                    <span class="tag">Helm</span>
-                    <span class="tag">Prometheus</span>
-                    <span class="tag">Grafana</span>
-                    <span class="tag">Alertmanager</span>
-                    <span class="tag">k3d</span>
-                    <span class="tag">Bash</span>
-                </div>
-                <p style="margin-top: 1rem; margin-bottom: 0;">
-                    <a href="https://github.com/vramosr1986-gif/sre-observability-platform" target="_blank" style="color: #60a5fa; text-decoration: none;">
-                        Ver repositorio →
-                    </a>
-                </p>
-            </div>
-
-            <div class="card-dark project">
-                <h3>terraform-docker-lab</h3>
-                <p class="desc">
-                    Stack multi-contenedor desplegado con Terraform sobre Docker. Incluye Nginx, PostgreSQL y Adminer, con pipeline CI/CD completo en GitHub Actions (validate, plan, apply, smoke test y destroy).
-                </p>
-                <p class="desc">
-                    <strong>Lo que demuestra:</strong> Infrastructure as Code, contenedores, bind mounts, CI/CD real y gestión segura de secretos.
-                </p>
-                <div class="tags">
-                    <span class="tag">Terraform</span>
-                    <span class="tag">Docker</span>
-                    <span class="tag">GitHub Actions</span>
-                    <span class="tag">Bash</span>
-                    <span class="tag">HCL</span>
-                </div>
-                <p style="margin-top: 1rem; margin-bottom: 0;">
-                    <a href="https://github.com/vramosr1986-gif/terraform-docker-lab" target="_blank" style="color: #60a5fa; text-decoration: none;">
-                        Ver repositorio →
-                    </a>
-                </p>
-            </div>
-
-            <p style="color: #64748b; font-style: italic; margin-top: 1rem;">
-                Más proyectos en camino. Esto es solo el principio.
-            </p>
-        </section>
-
-        <section>
-            <h2>Habilidades</h2>
-            <div class="skills">
-                <div class="skill-group">
-                    <h4>Automatización</h4>
-                    <ul>
-                        <li>Ansible</li>
-                        <li>PowerShell</li>
-                        <li>Bash</li>
-                        <li>Terraform</li>
-                    </ul>
-                </div>
-                <div class="skill-group">
-                    <h4>Cloud-Native &amp; SRE</h4>
-                    <ul>
-                        <li>Kubernetes</li>
-                        <li>Argo CD</li>
-                        <li>Helm</li>
-                        <li>Prometheus</li>
-                        <li>Grafana</li>
-                        <li>Alertmanager</li>
-                    </ul>
-                </div>
-                <div class="skill-group">
-                    <h4>Sistemas</h4>
-                    <ul>
-                        <li>Windows Server</li>
-                        <li>Active Directory</li>
-                        <li>Linux</li>
-                        <li>VMware vSphere</li>
-                    </ul>
-                </div>
-                <div class="skill-group">
-                    <h4>Cloud & Contenedores</h4>
-                    <ul>
-                        <li>Azure (en progreso)</li>
-                        <li>Docker</li>
-                        <li>GitHub Actions</li>
-                    </ul>
-                </div>
-                <div class="skill-group">
-                    <h4>Otros</h4>
-                    <ul>
-                        <li>APIs REST</li>
-                        <li>Git</li>
-                        <li>SQL Server</li>
-                        <li>Inglés B2</li>
-                    </ul>
-                </div>
-            </div>
-        </section>
-
-        <footer>
-            Victor Ramos · <a href="https://github.com/vramosr1986-gif" target="_blank">@vramosr1986-gif</a>
-            <br>
-            Hecho con HTML, CSS y aprendizaje continuo.
-        </footer>
-
+  <header class="rail">
+    <h1>Victor Ramos</h1>
+    <p class="role">Ingeniero de Infraestructura y Automatización IT</p>
+    <nav aria-label="Secciones">
+      <a href="#sobre-mi">Sobre mí</a>
+      <a href="#automatizacion">Automatización</a>
+      <a href="#laboratorios">Laboratorios</a>
+      <a href="#habilidades">Habilidades</a>
+    </nav>
+    <div class="contact">
+      <a href="https://github.com/vramosr1986-gif" target="_blank" rel="noopener">GitHub</a>
+      <a href="https://www.linkedin.com/in/victor-ramos" target="_blank" rel="noopener">LinkedIn</a>
+      <a href="mailto:vramos86@gmail.com">vramos86@gmail.com</a>
     </div>
+  </header>
+
+  <main>
+    <section id="sobre-mi">
+      <h2>Sobre mí</h2>
+      <p>Ingeniero de infraestructura y automatización con más de 10 años de experiencia. Empecé en gestión de dispositivos móviles (BlackBerry, SOTI, MobileIron, AirWatch) y desde entonces he trabajado con Windows, Linux, Active Directory, VMware y Azure, automatizando con Ansible, PowerShell y Terraform.</p>
+      <p>Me interesa que la infraestructura sea reproducible: que se pueda describir en código, versionar y reconstruir. Por eso en este portfolio practico Kubernetes, GitOps y CI/CD, y estoy explorando IA generativa.</p>
+      <p>Mi formación combina el Grado Superior en Administración de Sistemas Informáticos con el Bachelor en Tecnologías de la Información para la Empresa: base técnica y visión de negocio.</p>
+    </section>
+
+    <section id="automatizacion">
+      <h2>Automatización en producción</h2>
+      <ul class="work">
+        <li><strong>Autorreparación de servidores</strong><span>Recuperación automática de máquinas con CPU o RAM al límite, sin necesidad de avisar a la guardia.</span></li>
+        <li><strong>Blackouts desde un ticket</strong><span>Creación automática de blackouts de monitorización a partir de la apertura de un ticket.</span></li>
+        <li><strong>Bajas en NetBackup</strong><span>Exclusión de servidores de las políticas de backup con un solo comando.</span></li>
+        <li><strong>Bajas de servidores en SCCM</strong><span>Procedimiento de baja automatizado de principio a fin.</span></li>
+        <li><strong>Control de versiones de Windows</strong><span>Informe automático que compara la build de Windows de cada equipo con la vigente y señala los desactualizados.</span></li>
+        <li><strong>Despliegue de aplicaciones Java</strong><span>Ejecución automatizada del script de instalación del equipo de desarrollo en múltiples servidores.</span></li>
+      </ul>
+    </section>
+
+    <section id="laboratorios">
+      <h2>Laboratorios</h2>
+
+      <article class="project">
+        <h3>sre-observability-platform</h3>
+        <p>Plataforma de observabilidad y GitOps en Kubernetes sobre un clúster k3d multi-nodo. Incluye Argo CD con App-of-Apps, Prometheus, Grafana y Alertmanager, y se reconstruye entera desde cero con un único script.</p>
+        <p><strong>Demuestra:</strong> GitOps declarativo con reconciliación y self-healing, gestión de CRDs, stack de observabilidad completo, charts de Helm propios y port-forwards automatizados.</p>
+        <svg class="diagram" viewBox="0 0 600 150" role="img" aria-label="Diagrama: el repositorio Git alimenta a Argo CD, que despliega Prometheus, Grafana y Alertmanager en un clúster k3d.">
+          <defs><marker id="a1" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0L10 5L0 10z" class="head"/></marker></defs>
+          <rect class="box" x="10" y="55" width="90" height="40" rx="4"/><text x="55" y="79">Repositorio Git</text>
+          <rect class="box" x="140" y="55" width="100" height="40" rx="4"/><text x="190" y="79">Argo CD</text>
+          <rect class="group" x="280" y="12" width="312" height="126" rx="6"/><text class="sub" x="436" y="34">Clúster k3d multi-nodo</text>
+          <rect class="box" x="292" y="55" width="92" height="40" rx="4"/><text x="338" y="79">Prometheus</text>
+          <rect class="box" x="392" y="55" width="92" height="40" rx="4"/><text x="438" y="79">Grafana</text>
+          <rect class="box" x="492" y="55" width="92" height="40" rx="4"/><text x="538" y="79">Alertmanager</text>
+          <path class="arrow" d="M100 75H138" marker-end="url(#a1)"/>
+          <path class="arrow" d="M240 75H278" marker-end="url(#a1)"/>
+        </svg>
+        <p class="stack">Kubernetes, Argo CD, Helm, Prometheus, Grafana, Alertmanager, k3d, Bash</p>
+        <a class="repo" href="https://github.com/vramosr1986-gif/sre-observability-platform" target="_blank" rel="noopener">Ver repositorio</a>
+      </article>
+
+      <article class="project">
+        <h3>terraform-docker-lab</h3>
+        <p>Stack multi-contenedor desplegado con Terraform sobre Docker. Incluye Nginx, PostgreSQL y Adminer, con pipeline CI/CD completo en GitHub Actions: validate, plan, apply, smoke test y destroy.</p>
+        <p><strong>Demuestra:</strong> Infrastructure as Code, contenedores, bind mounts, CI/CD real y gestión segura de secretos.</p>
+        <svg class="diagram" viewBox="0 0 600 150" role="img" aria-label="Diagrama: GitHub Actions ejecuta Terraform, que despliega Nginx, PostgreSQL y Adminer sobre Docker.">
+          <defs><marker id="a2" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0L10 5L0 10z" class="head"/></marker></defs>
+          <rect class="box" x="10" y="55" width="120" height="40" rx="4"/><text x="70" y="79">GitHub Actions</text>
+          <rect class="box" x="170" y="55" width="100" height="40" rx="4"/><text x="220" y="79">Terraform</text>
+          <rect class="group" x="310" y="12" width="282" height="126" rx="6"/><text class="sub" x="451" y="34">Docker</text>
+          <rect class="box" x="320" y="55" width="82" height="40" rx="4"/><text x="361" y="79">Nginx</text>
+          <rect class="box" x="410" y="55" width="86" height="40" rx="4"/><text x="453" y="79">PostgreSQL</text>
+          <rect class="box" x="504" y="55" width="80" height="40" rx="4"/><text x="544" y="79">Adminer</text>
+          <path class="arrow" d="M130 75H168" marker-end="url(#a2)"/>
+          <path class="arrow" d="M270 75H308" marker-end="url(#a2)"/>
+        </svg>
+        <p class="stack">Terraform, Docker, GitHub Actions, Bash, HCL</p>
+        <a class="repo" href="https://github.com/vramosr1986-gif/terraform-docker-lab" target="_blank" rel="noopener">Ver repositorio</a>
+      </article>
+
+    </section>
+
+    <section id="habilidades">
+      <h2>Habilidades</h2>
+      <dl>
+        <dt>Automatización</dt>
+        <dd>Ansible, PowerShell, Bash, Terraform</dd>
+        <dt>Cloud-native y SRE</dt>
+        <dd>Kubernetes, Argo CD, Helm, Prometheus, Grafana, Alertmanager</dd>
+        <dt>Sistemas</dt>
+        <dd>Windows Server, Active Directory, Linux, VMware vSphere, MDM/UEM</dd>
+        <dt>Cloud y contenedores</dt>
+        <dd>Azure (en progreso), Docker, GitHub Actions</dd>
+        <dt>Otros</dt>
+        <dd>IA generativa, APIs REST, Git, SQL Server, inglés B2</dd>
+      </dl>
+    </section>
+
+    <footer>Victor Ramos · <a href="https://github.com/vramosr1986-gif" target="_blank" rel="noopener">@vramosr1986-gif</a><br>Imagen de portada: <a href="https://unsplash.com/@growtika" target="_blank" rel="noopener">Growtika</a> en <a href="https://unsplash.com" target="_blank" rel="noopener">Unsplash</a>.</footer>
+  </main>
+
+</div>
 </body>
 </html>
