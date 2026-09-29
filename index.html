@@ -146,7 +146,7 @@ footer { margin-top: 5rem; padding-top: 1.5rem; border-top: 1px solid var(--line
     <nav aria-label="Secciones">
       <a href="#sobre-mi">Sobre mí</a>
       <a href="#automatizacion">Automatización</a>
-      <a href="#laboratorios">Laboratorios</a>
+      <a href="#proyectos">Proyectos personales</a>
       <a href="#habilidades">Habilidades</a>
     </nav>
     <div class="contact">
@@ -159,8 +159,8 @@ footer { margin-top: 5rem; padding-top: 1.5rem; border-top: 1px solid var(--line
   <main>
     <section id="sobre-mi">
       <h2>Sobre mí</h2>
-      <p>Ingeniero de infraestructura y automatización con más de 10 años de experiencia. Empecé en gestión de dispositivos móviles (BlackBerry, SOTI, MobileIron, AirWatch) y desde entonces he trabajado con Windows, Linux, Active Directory, VMware y Azure, automatizando con Ansible, PowerShell y Terraform.</p>
-      <p>Me interesa que la infraestructura sea reproducible: que se pueda describir en código, versionar y reconstruir. Por eso en este portfolio practico Kubernetes, GitOps y CI/CD, y estoy explorando IA generativa.</p>
+      <p>Ingeniero de infraestructura y automatización con más de 10 años de experiencia. Empecé en gestión de dispositivos móviles (BlackBerry, SOTI, MobileIron, AirWatch) y desde entonces he trabajado con Windows, Linux, Active Directory, VMware y Azure, automatizando con Ansible, PowerShell y Rundeck.</p>
+      <p>Me interesa que la infraestructura sea reproducible: que se pueda describir en código, versionar y reconstruir. Por eso, fuera del trabajo, practico Terraform, Kubernetes, GitOps y CI/CD en proyectos propios, y estoy explorando IA generativa.</p>
       <p>Mi formación combina el Grado Superior en Administración de Sistemas Informáticos con el Bachelor en Tecnologías de la Información para la Empresa: base técnica y visión de negocio.</p>
     </section>
 
@@ -176,13 +176,14 @@ footer { margin-top: 5rem; padding-top: 1.5rem; border-top: 1px solid var(--line
       </ul>
     </section>
 
-    <section id="laboratorios">
-      <h2>Laboratorios</h2>
+    <section id="proyectos">
+      <h2>Proyectos personales</h2>
+      <p style="color: var(--muted); font-size: 0.97rem; margin-bottom: 1.5rem;">Proyectos que construyo fuera del trabajo para practicar tecnologías que todavía no uso en producción.</p>
 
       <article class="project">
         <h3>sre-observability-platform</h3>
         <p>Plataforma de observabilidad y GitOps en Kubernetes sobre un clúster k3d multi-nodo. Incluye Argo CD con App-of-Apps, Prometheus, Grafana y Alertmanager, y se reconstruye entera desde cero con un único script.</p>
-        <p><strong>Demuestra:</strong> GitOps declarativo con reconciliación y self-healing, gestión de CRDs, stack de observabilidad completo, charts de Helm propios y port-forwards automatizados.</p>
+        <p><strong>Practico:</strong> GitOps declarativo con reconciliación y self-healing, gestión de CRDs, stack de observabilidad completo, charts de Helm propios y port-forwards automatizados.</p>
         <svg class="diagram" viewBox="0 0 600 150" role="img" aria-label="Diagrama: el repositorio Git alimenta a Argo CD, que despliega Prometheus, Grafana y Alertmanager en un clúster k3d.">
           <defs><marker id="a1" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0L10 5L0 10z" class="head"/></marker></defs>
           <rect class="box" x="10" y="55" width="90" height="40" rx="4"/><text x="55" y="79">Repositorio Git</text>
@@ -201,7 +202,7 @@ footer { margin-top: 5rem; padding-top: 1.5rem; border-top: 1px solid var(--line
       <article class="project">
         <h3>terraform-docker-lab</h3>
         <p>Stack multi-contenedor desplegado con Terraform sobre Docker. Incluye Nginx, PostgreSQL y Adminer, con pipeline CI/CD completo en GitHub Actions: validate, plan, apply, smoke test y destroy.</p>
-        <p><strong>Demuestra:</strong> Infrastructure as Code, contenedores, bind mounts, CI/CD real y gestión segura de secretos.</p>
+        <p><strong>Practico:</strong> Infrastructure as Code, contenedores, bind mounts, CI/CD real y gestión segura de secretos.</p>
         <svg class="diagram" viewBox="0 0 600 150" role="img" aria-label="Diagrama: GitHub Actions ejecuta Terraform, que despliega Nginx, PostgreSQL y Adminer sobre Docker.">
           <defs><marker id="a2" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0L10 5L0 10z" class="head"/></marker></defs>
           <rect class="box" x="10" y="55" width="120" height="40" rx="4"/><text x="70" y="79">GitHub Actions</text>
@@ -223,13 +224,13 @@ footer { margin-top: 5rem; padding-top: 1.5rem; border-top: 1px solid var(--line
       <h2>Habilidades</h2>
       <dl>
         <dt>Automatización</dt>
-        <dd>Ansible, PowerShell, Bash, Terraform</dd>
+        <dd>Ansible, PowerShell, Bash, Rundeck. Nociones de StackStorm</dd>
         <dt>Cloud-native y SRE</dt>
-        <dd>Kubernetes, Argo CD, Helm, Prometheus, Grafana, Alertmanager</dd>
+        <dd>Kubernetes, Argo CD, Helm, Prometheus, Grafana, Alertmanager (proyectos personales)</dd>
         <dt>Sistemas</dt>
         <dd>Windows Server, Active Directory, Linux, VMware vSphere, MDM/UEM</dd>
         <dt>Cloud y contenedores</dt>
-        <dd>Azure (en progreso), Docker, GitHub Actions</dd>
+        <dd>Terraform, Docker, GitHub Actions (proyectos personales). Azure en progreso</dd>
         <dt>Otros</dt>
         <dd>IA generativa, APIs REST, Git, SQL Server, inglés B2</dd>
       </dl>
