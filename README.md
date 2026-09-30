@@ -11,6 +11,7 @@ Mi página personal de presentación como Ingeniero de Infraestructura y Automat
 - Presentación personal
 - Proyectos destacados
 - Habilidades técnicas
+- Certificados y formación (20 diplomas enlazados a Google Drive, copia en `certificados/`)
 - Enlaces a GitHub, LinkedIn y email
 
 ## Tecnologías

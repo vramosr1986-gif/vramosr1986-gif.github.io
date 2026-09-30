@@ -107,11 +107,24 @@ h3{font:600 1.3rem/1.3 var(--display); margin:0 0 .5rem; font-family:var(--mono)
 .skills dt{font:600 .98rem var(--display); color:var(--accent); margin:0 0 .25rem}
 .skills dd{margin:0; color:#cfd9ea; font-size:.97rem}
 
+/* Certificados */
+.certs{list-style:none; margin:0; padding:0}
+.certs li{margin-bottom:1.6rem}
+.certs li:last-child{margin-bottom:0}
+.certs h3{font-family:var(--display); font-size:1.02rem; letter-spacing:.01em; color:var(--accent); margin:0 0 .7rem}
+.certs ul{display:grid; grid-template-columns:repeat(2,1fr); gap:1px; background:var(--line); border:1px solid var(--line); border-radius:12px; overflow:hidden}
+.certs ul li{margin:0}
+.cert{display:flex; flex-direction:column; gap:.3rem; background:rgba(13,21,38,.94); padding:.9rem 1.2rem; text-decoration:none; color:inherit}
+.cert:hover{background:rgba(20,184,166,.09)}
+.cert b{font:600 1rem/1.4 var(--display); color:var(--text)}
+.cert:hover b{color:#7ee7da}
+.cert span{color:var(--muted); font-size:.88rem}
+
 footer{padding:2.5rem 0 3rem; color:var(--muted); font-size:.92rem; border-top:1px solid var(--line); margin-top:1.5rem}
 
 @media (max-width:52rem){
   .hero .wrap{grid-template-columns:1fr}
-  .auto,.skills{grid-template-columns:1fr}
+  .auto,.skills,.certs ul{grid-template-columns:1fr}
 }
 </style>
 </head>
@@ -125,6 +138,7 @@ footer{padding:2.5rem 0 3rem; color:var(--muted); font-size:.92rem; border-top:1
         <li><a href="#automatizacion">Automatización</a></li>
         <li><a href="#proyectos">Proyectos personales</a></li>
         <li><a href="#habilidades">Habilidades</a></li>
+        <li><a href="#certificados">Certificados</a></li>
       </ul>
     </nav>
   </div>
@@ -214,6 +228,70 @@ root-app     <span class="ok">Synced</span>        <span class="ok">Healthy</spa
       <div><dt>Cloud y contenedores</dt><dd>Terraform, Docker, GitHub Actions (proyectos personales). Azure en progreso</dd></div>
       <div><dt>Otros</dt><dd>IA generativa, APIs REST, Git, SQL Server, inglés B2</dd></div>
     </dl>
+  </div>
+</section>
+<section id="certificados">
+  <div class="wrap">
+    <h2>Certificados y formación</h2>
+    <p class="lead">Veinte diplomas entre formación oficial, fabricantes y certificaciones profesionales. Cada uno abre el PDF original.</p>
+
+    <ul class="certs">
+      <li>
+        <h3>Microsoft</h3>
+        <ul>
+          <li><a class="cert" href="https://drive.google.com/file/d/1ogE7q42fpXxLoXjsldnsMoWhPln-tQKV/view" target="_blank" rel="noopener"><span>2022</span><b>Microsoft 365 Fundamentals (MS-900) — Oficial</b></a></li>
+          <li><a class="cert" href="https://drive.google.com/file/d/1FOh58yeyXjKSVYXKzQ8ClNY-eB1ltT9I/view" target="_blank" rel="noopener"><span>2022</span><b>Microsoft 365 Fundamentals (MS-900) — INAEM</b></a></li>
+        </ul>
+      </li>
+
+      <li>
+        <h3>Formación</h3>
+        <ul>
+          <li><a class="cert" href="https://drive.google.com/file/d/1hiY9ScqEv7DK3nCy_O_tETozwtZ5D7YX/view" target="_blank" rel="noopener"><span>2019</span><b>Comunicación Profesional y Habilidades Sociales</b></a></li>
+          <li><a class="cert" href="https://drive.google.com/file/d/1tlBX1jFAtkhJWFaYxMtKiwCxpvKuErGE/view" target="_blank" rel="noopener"><span>2015</span><b>Gestión de Sistemas Informáticos</b></a></li>
+          <li><a class="cert" href="https://drive.google.com/file/d/1T-v-5gA4PF0s6HF5NvrDH93U63I9IEH1/view" target="_blank" rel="noopener"><span>2012</span><b>Analista Programador C (350 h)</b></a></li>
+          <li><a class="cert" href="https://drive.google.com/file/d/1PFBDhyUHr8ocdp28KC08-ktRbqtDAT-2/view" target="_blank" rel="noopener"><span>2009</span><b>Administrador de Servidores y Páginas Web (350 h)</b></a></li>
+        </ul>
+      </li>
+
+      <li>
+        <h3>Oracle</h3>
+        <ul>
+          <li><a class="cert" href="https://drive.google.com/file/d/1sIkOz5DGajWunIfR9bifGeSAK0jxCSHC/view" target="_blank" rel="noopener"><span>2018</span><b>MySQL Database Administrator Ed4</b></a></li>
+          <li><a class="cert" href="https://drive.google.com/file/d/1ufczxnFk5b2W2OKQvW9w-hSwkC_D-hH9/view" target="_blank" rel="noopener"><span>2018</span><b>MySQL Fundamentals Ed1</b></a></li>
+        </ul>
+      </li>
+
+      <li>
+        <h3>MobileIron</h3>
+        <ul>
+          <li><a class="cert" href="https://drive.google.com/file/d/1LSDx2u_xYXQ-YHoADPImAgRd2G7QH0jg/view" target="_blank" rel="noopener"><span>2017</span><b>Cloud Fundamentals</b></a></li>
+          <li><a class="cert" href="https://drive.google.com/file/d/1-Jet6THQ-2B6JLerxYLLjlomHrK-Fows/view" target="_blank" rel="noopener"><span>2017</span><b>Solution Architect Fundamentals V7.5</b></a></li>
+          <li><a class="cert" href="https://drive.google.com/file/d/1HMvJdxaATcPBwv9JkAw0iQbgmRN127nO/view" target="_blank" rel="noopener"><span>2017</span><b>Support Specialist Fundamentals V8.5</b></a></li>
+          <li><a class="cert" href="https://drive.google.com/file/d/1hkl3YKjpxif_m_GN3rmr9sJ8Rav8WM03/view" target="_blank" rel="noopener"><span>2015</span><b>Account Executive Intermediate</b></a></li>
+          <li><a class="cert" href="https://drive.google.com/file/d/1Ud9WT09ITjUejZ69FRpl-0tQ7QYaxoH1/view" target="_blank" rel="noopener"><span>2014</span><b>Account Executive Fundamentals</b></a></li>
+          <li><a class="cert" href="https://drive.google.com/file/d/1FKiM_E7OiYyAhOEQ_lKp5pTgWvdED28k/view" target="_blank" rel="noopener"><span>2014</span><b>Solution Architect Fundamentals</b></a></li>
+          <li><a class="cert" href="https://drive.google.com/file/d/19DGHc1Im4v6PJJRVUf21vRTqfM_NnD7L/view" target="_blank" rel="noopener"><span>2014</span><b>Support Specialist Fundamentals</b></a></li>
+        </ul>
+      </li>
+
+      <li>
+        <h3>AirWatch</h3>
+        <ul>
+          <li><a class="cert" href="https://drive.google.com/file/d/1GUfsvM189LdaxvAespP68E-RMc3Zd7PK/view" target="_blank" rel="noopener"><span>2016</span><b>Sales Professional</b></a></li>
+        </ul>
+      </li>
+
+      <li>
+        <h3>VMware</h3>
+        <ul>
+          <li><a class="cert" href="https://drive.google.com/file/d/1pC9PS1rgdgd5f0uGIR-ZNpQEll4OMzfG/view" target="_blank" rel="noopener"><span>2015</span><b>VTSP — Virtualization Technical Sales Professional</b></a></li>
+          <li><a class="cert" href="https://drive.google.com/file/d/1h01mD6qkagwKWEc2uks4N2w7XYVvwmFh/view" target="_blank" rel="noopener"><span>2015</span><b>VTSP Mobility</b></a></li>
+          <li><a class="cert" href="https://drive.google.com/file/d/1NSPMKjm_BBp1GUVzu66fyNcP82QmMiLT/view" target="_blank" rel="noopener"><span>2015</span><b>VSP — Virtualization Sales Professional</b></a></li>
+          <li><a class="cert" href="https://drive.google.com/file/d/1MuZnwRbohF5riYQalfJPLxr7GsopomJu/view" target="_blank" rel="noopener"><span>2015</span><b>VSP Mobility</b></a></li>
+        </ul>
+      </li>
+    </ul>
   </div>
 </section>
 </main>
