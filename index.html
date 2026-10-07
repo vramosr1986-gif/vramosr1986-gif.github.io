@@ -95,6 +95,7 @@ h3{font:600 1.3rem/1.3 var(--display); margin:0 0 .5rem; font-family:var(--mono)
 .proj:hover{border-color:#2a4068}
 .tag{display:inline-block; margin-left:.6rem; padding:.1rem .55rem; font:500 .75rem var(--body); color:#fbbf24; border:1px solid rgba(251,191,36,.35); border-radius:99px; vertical-align:middle}
 .tag.done{color:var(--ok); border-color:rgba(74,222,128,.35)}
+.tag.free{color:var(--accent-2); border-color:rgba(56,189,248,.35)}
 .flow{display:flex; flex-wrap:wrap; align-items:center; gap:.35rem .5rem; margin:.9rem 0 1rem; padding:.7rem .9rem; background:var(--panel-2); border:1px solid var(--line); border-radius:10px; font:.82rem var(--mono); color:#cbd5e1}
 .flow b{font-weight:500; color:var(--text); padding:.12rem .5rem; border-radius:6px; background:rgba(56,189,248,.10); border:1px solid rgba(56,189,248,.25)}
 .flow i{font-style:normal; color:var(--accent)}
@@ -207,7 +208,16 @@ root-app     <span class="ok">Synced</span>        <span class="ok">Healthy</spa
 <section id="proyectos">
   <div class="wrap">
     <h2>Proyectos personales</h2>
-    <p class="lead">Laboratorios que construyo fuera del trabajo para practicar tecnologías que todavía no uso en producción. Ambos son reproducibles desde cero y están documentados con capturas en su repositorio.</p>
+    <p class="lead">Proyectos que construyo fuera de mi trabajo en DXC: laboratorios reproducibles para practicar tecnologías que todavía no uso en producción y un proyecto freelance real, publicado como demo con datos ficticios.</p>
+
+    <article class="proj">
+      <h3>crm-fisio-demo <span class="tag free">Freelance · en producción</span></h3>
+      <p>CRM interno que desarrollé para un centro de fisioterapia y pilates, hoy en uso diario. Sustituye el registro manual de sesiones y cobros en hojas de cálculo por una aplicación web con usuarios, roles y auditoría. El repositorio es una versión de demostración: el código del sistema real con todos los datos sustituidos por valores ficticios.</p>
+      <p class="practico"><b>Incluye:</b> login propio con contraseñas con sal y sesiones con caducidad, roles con filtrado de filas por profesional, validaciones en cliente y servidor, detección de duplicados, calendario de sesiones, facturas en PDF con IVA e IRPF, exportación a Excel, auditoría de cada cambio y registro de accesos.</p>
+      <p class="practico"><b>Despliegue:</b> clasp y GitHub Actions con entornos de desarrollo y producción separados.</p>
+      <ul class="chips"><li>Google Apps Script</li><li>Google Sheets</li><li>JavaScript</li><li>clasp</li><li>GitHub Actions</li><li>ESLint</li></ul>
+      <a class="btn" href="https://github.com/vramosr1986-gif/crm-fisio-demo">Ver repositorio de demo</a>
+    </article>
 
     <article class="proj">
       <h3>sre-observability-platform <span class="tag done">Completado</span></h3>
