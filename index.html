@@ -94,6 +94,14 @@ h3{font:600 1.3rem/1.3 var(--display); margin:0 0 .5rem; font-family:var(--mono)
 .proj{background:linear-gradient(180deg,rgba(16,26,47,.92),rgba(13,21,38,.92)); border:1px solid var(--line); border-radius:14px; padding:1.5rem 1.6rem; margin-bottom:1.3rem}
 .proj:hover{border-color:#2a4068}
 .tag{display:inline-block; margin-left:.6rem; padding:.1rem .55rem; font:500 .75rem var(--body); color:#fbbf24; border:1px solid rgba(251,191,36,.35); border-radius:99px; vertical-align:middle}
+.tag.done{color:var(--ok); border-color:rgba(74,222,128,.35)}
+.flow{display:flex; flex-wrap:wrap; align-items:center; gap:.35rem .5rem; margin:.9rem 0 1rem; padding:.7rem .9rem; background:var(--panel-2); border:1px solid var(--line); border-radius:10px; font:.82rem var(--mono); color:#cbd5e1}
+.flow b{font-weight:500; color:var(--text); padding:.12rem .5rem; border-radius:6px; background:rgba(56,189,248,.10); border:1px solid rgba(56,189,248,.25)}
+.flow i{font-style:normal; color:var(--accent)}
+.shots{display:grid; grid-template-columns:repeat(2,1fr); gap:.8rem; margin:1rem 0 .4rem}
+.shots figure{margin:0}
+.shots img{display:block; width:100%; aspect-ratio:16/10; object-fit:cover; object-position:top left; border-radius:8px; border:1px solid var(--line); background:var(--panel-2)}
+.shots figcaption{margin-top:.35rem; color:var(--muted); font-size:.82rem}
 .proj p{margin:.4rem 0 .8rem; color:#cfd9ea; max-width:48rem}
 .practico{color:var(--muted)} .practico b{color:var(--text); font-weight:600}
 .chips{display:flex; flex-wrap:wrap; gap:.4rem; margin:1rem 0 1.1rem; padding:0; list-style:none}
@@ -124,7 +132,7 @@ footer{padding:2.5rem 0 3rem; color:var(--muted); font-size:.92rem; border-top:1
 
 @media (max-width:52rem){
   .hero .wrap{grid-template-columns:1fr}
-  .auto,.skills,.certs ul{grid-template-columns:1fr}
+  .auto,.skills,.certs ul,.shots{grid-template-columns:1fr}
 }
 </style>
 </head>
@@ -158,11 +166,12 @@ footer{padding:2.5rem 0 3rem; color:var(--muted); font-size:.92rem; border-top:1
       </div>
     </div>
     <div>
-      <div class="term" role="img" aria-label="Salida de kubectl con cuatro aplicaciones de Argo CD en estado Synced y Healthy">
+      <div class="term" role="img" aria-label="Salida de kubectl con cinco aplicaciones de Argo CD en estado Synced y Healthy">
         <div class="term-bar"><i></i><i></i><i></i><span>sre-observability-platform</span></div>
 <pre><span class="p">$</span> kubectl get applications -n argocd
 <span class="h">NAME         SYNC STATUS   HEALTH STATUS</span>
 demo-app     <span class="ok">Synced</span>        <span class="ok">Healthy</span>
+eda-app      <span class="ok">Synced</span>        <span class="ok">Healthy</span>
 grafana      <span class="ok">Synced</span>        <span class="ok">Healthy</span>
 prometheus   <span class="ok">Synced</span>        <span class="ok">Healthy</span>
 root-app     <span class="ok">Synced</span>        <span class="ok">Healthy</span></pre>
@@ -198,20 +207,30 @@ root-app     <span class="ok">Synced</span>        <span class="ok">Healthy</spa
 <section id="proyectos">
   <div class="wrap">
     <h2>Proyectos personales</h2>
-    <p class="lead">Proyectos que construyo fuera del trabajo para practicar tecnologías que todavía no uso en producción.</p>
+    <p class="lead">Laboratorios que construyo fuera del trabajo para practicar tecnologías que todavía no uso en producción. Ambos son reproducibles desde cero y están documentados con capturas en su repositorio.</p>
 
     <article class="proj">
-      <h3>sre-observability-platform <span class="tag">En desarrollo</span></h3>
-      <p>Plataforma de observabilidad y GitOps en Kubernetes sobre un clúster k3d multi-nodo. Incluye Argo CD con App-of-Apps, Prometheus, Grafana y Alertmanager, y se reconstruye entera desde cero con un único script.</p>
-      <p class="practico"><b>Practico:</b> GitOps declarativo con reconciliación y self-healing, gestión de CRDs, stack de observabilidad completo, charts de Helm propios y port-forwards automatizados.</p>
-      <ul class="chips"><li>Kubernetes</li><li>Argo CD</li><li>Helm</li><li>Prometheus</li><li>Grafana</li><li>Alertmanager</li><li>k3d</li><li>Bash</li></ul>
+      <h3>sre-observability-platform <span class="tag done">Completado</span></h3>
+      <p>Plataforma de observabilidad en Kubernetes gestionada íntegramente con GitOps. Un único script levanta desde cero un clúster k3d (1 server + 2 agents) con Argo CD, que despliega todo lo demás desde Git: Prometheus, Alertmanager, Grafana con dashboard provisionado, una aplicación de demostración y Event-Driven Ansible.</p>
+      <p>Cuando salta una de mis alertas (<code>HighCPU</code>, <code>HighMemory</code> o <code>PodNotReady</code>) recorre la cadena completa hasta un playbook de Ansible que registra y notifica el evento:</p>
+      <div class="flow" role="img" aria-label="Flujo de alertas: Prometheus, Alertmanager, EDA, Ansible, webhook"><b>Prometheus</b><i>→</i><b>Alertmanager</b><i>→</i><b>EDA</b><i>→</i><b>Ansible</b><i>→</i><b>webhook</b></div>
+      <p class="practico"><b>Practico:</b> GitOps con App-of-Apps y self-healing, reglas de alerta propias validadas con una prueba de carga (<code>stress-ng</code>), enrutado de Alertmanager, Event-Driven Ansible con <code>ansible-rulebook</code>, Grafana como código y un script de demo que verifica el flujo de extremo a extremo.</p>
+      <div class="shots">
+        <figure><img loading="lazy" src="https://raw.githubusercontent.com/vramosr1986-gif/sre-observability-platform/main/docs/screenshots/grafana-dashboard.jpeg" alt="Dashboard Node Exporter Full en Grafana, provisionado desde Git"><figcaption>Grafana con datasource y dashboard versionados en Git</figcaption></figure>
+        <figure><img loading="lazy" src="https://raw.githubusercontent.com/vramosr1986-gif/sre-observability-platform/main/docs/screenshots/prometheus-highcpu-firing.png" alt="Alerta HighCPU en estado firing en Prometheus durante la prueba de estrés"><figcaption>HighCPU en <i>firing</i> durante la prueba con stress-ng</figcaption></figure>
+      </div>
+      <ul class="chips"><li>Kubernetes</li><li>Argo CD</li><li>Helm</li><li>Prometheus</li><li>Alertmanager</li><li>Grafana</li><li>Event-Driven Ansible</li><li>Ansible</li><li>k3d</li><li>Bash</li></ul>
       <a class="btn" href="https://github.com/vramosr1986-gif/sre-observability-platform">Ver repositorio</a>
     </article>
 
     <article class="proj">
-      <h3>terraform-docker-lab</h3>
+      <h3>terraform-docker-lab <span class="tag done">Completado</span></h3>
       <p>Stack multi-contenedor desplegado con Terraform sobre Docker. Incluye Nginx, PostgreSQL y Adminer, con pipeline CI/CD completo en GitHub Actions: validate, plan, apply, smoke test y destroy.</p>
-      <p class="practico"><b>Practico:</b> Infrastructure as Code, contenedores, bind mounts, CI/CD real y gestión segura de secretos.</p>
+      <p class="practico"><b>Practico:</b> Infrastructure as Code, redes Docker internas (PostgreSQL sin puerto expuesto), volúmenes persistentes, CI/CD real y gestión segura de secretos.</p>
+      <div class="shots">
+        <figure><img loading="lazy" src="https://raw.githubusercontent.com/vramosr1986-gif/terraform-docker-lab/main/docs/screenshot-nginx.jpeg" alt="Página servida por el contenedor nginx desplegado con Terraform"><figcaption>Página servida por nginx en el puerto 8080</figcaption></figure>
+        <figure><img loading="lazy" src="https://raw.githubusercontent.com/vramosr1986-gif/terraform-docker-lab/main/docs/screenshot-adminer.jpeg" alt="Adminer conectado a PostgreSQL"><figcaption>Adminer gestionando PostgreSQL por la red interna</figcaption></figure>
+      </div>
       <ul class="chips"><li>Terraform</li><li>Docker</li><li>GitHub Actions</li><li>Bash</li><li>HCL</li></ul>
       <a class="btn" href="https://github.com/vramosr1986-gif/terraform-docker-lab">Ver repositorio</a>
     </article>
@@ -223,7 +242,7 @@ root-app     <span class="ok">Synced</span>        <span class="ok">Healthy</spa
     <h2>Habilidades</h2>
     <dl class="skills">
       <div><dt>Automatización</dt><dd>Ansible, PowerShell, Bash, Rundeck. Nociones de StackStorm</dd></div>
-      <div><dt>Cloud-native y SRE</dt><dd>Kubernetes, Argo CD, Helm, Prometheus, Grafana, Alertmanager (proyectos personales)</dd></div>
+      <div><dt>Cloud-native y SRE</dt><dd>Kubernetes, Argo CD, Helm, Prometheus, Grafana, Alertmanager, Event-Driven Ansible (proyectos personales)</dd></div>
       <div><dt>Sistemas</dt><dd>Windows Server, Active Directory, Linux, VMware vSphere, MDM/UEM</dd></div>
       <div><dt>Cloud y contenedores</dt><dd>Terraform, Docker, GitHub Actions (proyectos personales). Azure en progreso</dd></div>
       <div><dt>Otros</dt><dd>IA generativa, APIs REST, Git, SQL Server, inglés B2</dd></div>
